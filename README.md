@@ -35,9 +35,50 @@ API RESTful desenvolvida com Ruby on Rails, PostgreSQL e RSpec, para criação e
 5. Excecute os testes:
 
         bundle exec rspec
-### Funcionalidades(em construção)
+## Funcionalidades(em construção)
 
+### Criação de Posts
 
+Cria um novo post associado a um usuário (identificado por login). Se o usuário ainda não existir, ele é criado automaticamente.
+
+#### Parâmetros esperados:
+
+```json
+{
+  "login": "user_login",
+  "title": "My post",
+  "body": "This is my post.",
+  "ip": "192.168.0.1"
+}
+```
+
+#### Resposta de sucesso (201 Created):
+
+```json
+{
+  "user": {
+    "id": 1,
+    "login": "user_login"
+  },
+  "post": {
+    "id": 1,
+    "title": "My post",
+    "body": "This is my post.",
+    "ip": "192.168.0.1",
+    "user_id": 1
+  }
+}
+```
+#### Resposta de erro (422 Unprocessable Entity):
+
+```json
+{
+  "errors": [
+    "Title can't be blank",
+    "Body can't be blank"
+  ]
+}
+```
 
 
 
