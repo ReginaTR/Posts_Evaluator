@@ -12,4 +12,5 @@ group :development, :test do
   gem "brakeman", require: false
   gem 'rspec-rails'
   gem "rubocop-rails-omakase", require: false
+  gem 'shoulda-matchers', '~> 5.0'
 end
