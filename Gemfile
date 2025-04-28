@@ -13,3 +13,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem "rubocop-rails-omakase", require: false
 end
+
+gem "rubocop", "~> 1.75"
