@@ -14,3 +14,5 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
   gem 'shoulda-matchers', '~> 5.0'
 end
+
+gem "rubocop", "~> 1.75"
