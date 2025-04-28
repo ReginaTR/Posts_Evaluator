@@ -12,6 +12,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def top_posts
+    limit = params[:limit] || 10
+
+    posts = Post
+              .select("posts.id, posts.title, posts.body, AVG(ratings.value) as average_rating")
+              .left_joins(:ratings)
+              .group("posts.id")
+              .order("average_rating DESC NULLS LAST")
+              .limit(limit)
+
+    render json: posts.as_json(only: [ :id, :title, :body ])
+  end
+
   private
 
   def set_user
