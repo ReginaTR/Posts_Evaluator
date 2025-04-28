@@ -6,6 +6,8 @@ gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'dotenv-rails'
+gem "factory_bot_rails", "~> 6.4"
+gem "rubocop", "~> 1.75"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -15,4 +17,4 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 5.0'
 end
 
-gem "factory_bot_rails", "~> 6.4"
+
