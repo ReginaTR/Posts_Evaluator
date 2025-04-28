@@ -25,6 +25,21 @@ class PostsController < ApplicationController
     render json: posts.as_json(only: [ :id, :title, :body ])
   end
 
+  def ips_by_authors
+    posts = Post
+              .includes(:user)
+              .group_by(&:ip)
+
+    result = posts.map do |ip, posts_group|
+      {
+        ip: ip,
+        logins: posts_group.map { |post| post.user.login }.uniq
+      }
+    end
+
+    render json: result
+  end
+
   private
 
   def set_user
