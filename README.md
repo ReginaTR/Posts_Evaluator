@@ -4,7 +4,7 @@ API RESTful desenvolvida com Ruby on Rails, PostgreSQL e RSpec, para criação e
 
 ## Metodologias Ágeis
 Este projeto segue a metodologia ágil, utilizando o **Kanban** para gerenciar o fluxo de trabalho e **Issues** para acompanhar o progresso das tarefas. Abaixo estão os links para as respectivas páginas:
-- **Kanban**: [Link para o Kanban do projeto](https://github.com/users/ReginaTR/projects/10/views/1)
+- **Kanban**: [Link para o Kanban do projeto](https://github.com/users/ReginaTR/projects/10)
 - **Issues**: [Link para as Issues do GitHub](https://github.com/ReginaTR/Posts_Evaluator/issues?q=is%3Aissue%20state%3Aclosed)
 
 ##  Configuração Inicial
