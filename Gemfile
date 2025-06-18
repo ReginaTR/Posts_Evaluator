@@ -7,7 +7,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'dotenv-rails'
 gem "factory_bot_rails", "~> 6.4"
-gem "rubocop", "~> 1.75"
+gem "rubocop", "~> 1.76"
 gem 'sidekiq'
 gem "faker", "~> 3.5"
 
